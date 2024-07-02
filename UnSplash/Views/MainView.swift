@@ -27,6 +27,10 @@ struct MainView: View {
                         }
                     }
                 }
+                .refreshable {
+                    ProgressView()
+                    viewModel.refresh()
+                }
                 if showDescriptionDialog {
                     ToastView
                 }

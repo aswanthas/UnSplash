@@ -41,4 +41,10 @@ class ViewModel: ObservableObject {
         page += 1
         fetchData(page: page)
     }
+    
+    func refresh() {
+        page = 1
+        response.removeAll()
+        fetchData(page: page)
+    }
 }
